@@ -1,35 +1,18 @@
-import Category from "./components/category/category.component";
+import { Routes, Route } from "react-router-dom";
+import Home from "./routes/home/home.component";
+
+const Cart = () => {
+  return <h1>Welcome to the Cart!</h1>;
+};
 
 const App = () => {
-  const categories = [
-    {
-      id: 1,
-      title: "hats",
-      imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
-    },
-    {
-      id: 2,
-      title: "jackets",
-      imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
-    },
-    {
-      id: 3,
-      title: "sneakers",
-      imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
-    },
-    {
-      id: 4,
-      title: "womens",
-      imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
-    },
-    {
-      id: 5,
-      title: "mens",
-      imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
-    },
-  ];
-
-  return <Category categories={categories} />;
+  return (
+    <Routes>
+      <Route path="/home" element={<Home />}>
+        <Route path="cart" element={<Cart />} />
+      </Route>
+    </Routes>
+  );
 };
 
 export default App;
