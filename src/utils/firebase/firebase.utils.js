@@ -6,15 +6,13 @@ import {
   GoogleAuthProvider,
 } from "firebase/auth";
 
-require("dotenv").config();
-
 const firebaseConfig = {
-  apiKey: process.env.apiKey,
-  authDomain: process.env.authDomain,
-  projectId: process.env.projectId,
-  storageBucket: process.env.storageBucket,
-  messagingSenderId: process.env.messagingSenderId,
-  appId: process.env.appId,
+  apiKey: "AIzaSyA-L36oULx5cVJo4-TjhRRoji39dNhuWrI",
+  authDomain: "crown-clothing-6a0b4.firebaseapp.com",
+  projectId: "crown-clothing-6a0b4",
+  storageBucket: "crown-clothing-6a0b4.appspot.com",
+  messagingSenderId: "172525308307",
+  appId: "1:172525308307:web:d86d1bf61413025ad30066",
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
